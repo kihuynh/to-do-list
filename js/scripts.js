@@ -11,7 +11,12 @@ $(document).ready(function() {
 
     var newTask = new List(inputTask);
 
-    $("ul#list").append("<li><span class='task'>" + newTask.task + "</span></li>");
+  //  $('<input type="checkbox"/>').append('li');
+    $("ul#list").append("<li><input class='form-check-input' type='checkbox'><span class='task'>" + newTask.task + "</span></li>");
+
+    $("ul#list").click(function() {
+      $('li').hide();
+    });
 
     $(".result").show();
   });
